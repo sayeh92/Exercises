@@ -26,7 +26,7 @@ namespace ConsoleApp1
             int speedLimit = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter the speed of a car: ");
             int speedCar = Convert.ToInt32(Console.ReadLine());
-            int numFailurePoints = speedCar / 5 - 1 ;
+         
 
             if (speedCar < speedLimit)
             {
@@ -34,6 +34,7 @@ namespace ConsoleApp1
             }
             else if (speedCar > speedLimit)
             {
+                int numFailurePoints = (speedCar - speedLimit) / 5;
                 Console.WriteLine(numFailurePoints);
                 if (numFailurePoints > 12)
                 {
