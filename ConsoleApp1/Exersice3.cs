@@ -19,20 +19,22 @@ namespace ConsoleApp1
             Console.Write("Enter the width of your image: ");
             double width = Convert.ToDouble(Console.ReadLine());
 
-
+            string result;
             if (height < width)
             {
-                Console.WriteLine("landscape");
+                result = "landscape";
             }
             else if (height > width)
             {
-                Console.WriteLine("portrait");
+                result = "portrait";
+                
             }
             else
             {
-                Console.WriteLine("Man, Please");
+                result = "Man, Please";
+               
             }
-
+            Console.WriteLine(result);
 
         }
 
