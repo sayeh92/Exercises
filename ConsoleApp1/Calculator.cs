@@ -34,24 +34,29 @@ public class Exercise25
                 case 1:
                   
                     Console.Write("The Addition of  {0} and {1} is: {2}\n", num1, num2, num1 + num2);
+                  
                     break;
 
                 case 2:
                     Console.Write("The Substraction of {0}  and {1} is: {2}\n", num1, num2, num1 - num2);
+                
                     break;
 
                 case 3:
                     Console.Write("The Multiplication of {0}  and {1} is: {2}\n", num1, num2, num1 * num2);
+                   
                     break;
 
                 case 4:
                     if (num2 == 0)
                     {
                         Console.Write("The second integer is zero. Devide by zero.\n");
+                       
                     }
                     else
                     {
                         Console.Write("The Division of {0}  and {1} is : {2}\n", num1, num2, num1 / num2);
+                      
                     }
                     break;
 
@@ -64,7 +69,11 @@ public class Exercise25
                     break;
 
            }
-           static void Menu()
+
+            Console.WriteLine("Press any key to continue.");
+            Console.ReadKey(); //without this line, the loop will work but the switch cases will not work. it is just a loop of menu without any adding and so on.
+
+            static void Menu()
              {
                  Console.WriteLine("----- Menu -----");
                  Console.WriteLine("1: +");
