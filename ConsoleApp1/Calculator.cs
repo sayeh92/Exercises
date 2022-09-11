@@ -3,82 +3,80 @@ public class Exercise25
 {
     public static void Main()
     {
+        int num1 = 0;
+        int num2 = 0;
+        int opt;
         bool loop = true;
-        while (loop)
-        {
+
+       
+       while(loop){
+
             Console.Clear();
-            int num1, num2, opt;
-
-
 
             Console.Write("----------------------calculator-------------------------\n");
-
-
 
             Console.Write("Enter the first Number :");
             num1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter the second Number :");
             num2 = Convert.ToInt32(Console.ReadLine());
+            Menu();
+
+          
 
 
-            Console.Write("\nMenu :\n");
-            Console.Write("1.+\n2.-\n3.*\n4./\n5.Exit\n");
-            Console.Write("\nInput your choice :");
             opt = Convert.ToInt32(Console.ReadLine());
-            //int result;
-
-
-           /* static int Addition(int num1, int num2)
-            {
-                int result = num1 + num2;
-                return result;
-              
-            }*/
-
-
-
          
-                switch (opt)
-                {
-                    case 1:
-                       // result = Addition(num1, num2);
-                        Console.Write("The Addition of  {0} and {1} is: {2}\n", num1, num2, num1 + num2);
-                        break;
 
-                    case 2:
-                        Console.Write("The Substraction of {0}  and {1} is: {2}\n", num1, num2, num1 - num2);
-                        break;
+            
 
-                    case 3:
-                        Console.Write("The Multiplication of {0}  and {1} is: {2}\n", num1, num2, num1 * num2);
-                        break;
+            switch (opt)
+            {
+                case 1:
+                  
+                    Console.Write("The Addition of  {0} and {1} is: {2}\n", num1, num2, num1 + num2);
+                    break;
 
-                    case 4:
-                        if (num2 == 0)
-                        {
-                            Console.Write("The second integer is zero. Devide by zero.\n");
-                        }
-                        else
-                        {
-                            Console.Write("The Division of {0}  and {1} is : {2}\n", num1, num2, num1 / num2);
-                        }
-                        break;
+                case 2:
+                    Console.Write("The Substraction of {0}  and {1} is: {2}\n", num1, num2, num1 - num2);
+                    break;
 
-                    case 5:
-                        break;
+                case 3:
+                    Console.Write("The Multiplication of {0}  and {1} is: {2}\n", num1, num2, num1 * num2);
+                    break;
 
-                    default:
-                        Console.Write("Input correct option\n");
-                        break;
+                case 4:
+                    if (num2 == 0)
+                    {
+                        Console.Write("The second integer is zero. Devide by zero.\n");
+                    }
+                    else
+                    {
+                        Console.Write("The Division of {0}  and {1} is : {2}\n", num1, num2, num1 / num2);
+                    }
+                    break;
 
-                }
-            return;
-           
+                case 5:
+                    loop = false;
+                    break;
 
-           
+                default:
+                    Console.Write("Input correct option\n");
+                    break;
+
+           }
+           static void Menu()
+             {
+                 Console.WriteLine("----- Menu -----");
+                 Console.WriteLine("1: +");
+                 Console.WriteLine("2: -");
+                 Console.WriteLine("3: *");
+                 Console.WriteLine("4: /");
+                 Console.WriteLine("5: exit");
+
+             }
 
 
         }
-
     }
-}
+         
+  }
